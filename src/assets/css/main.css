@@ -1,0 +1,100 @@
+:root {
+  --header-height: 7rem;
+
+  --body-color: hsl(0, 0%, 100%);
+  --first-color: hsl(26, 100%, 55%);
+  --first-color-alt: hsl(25, 100%, 94%);
+
+  --very-dark-blue: hsl(220, 13%, 13%);
+  --dark-grayish-blue: hsl(219, 9%, 45%);
+  --grayish-blue: hsl(220, 14%, 75%);
+  --light-grayish-blue: hsl(223, 64%, 98%);
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+
+  --body-font: 'Roboto', sans-serif;
+  --h1-font-size: 2.8rem;
+  --normal-font-size: 1.6rem;
+  --small-font-size: 1.3rem;
+
+  --font-normal: 400;
+  --font-bold: 700;
+}
+
+@media screen and (min-width: 992) {
+  :root {
+    --h1-font-size: 4rem;
+    --small-font-size: 1.4rem;
+  }
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+ul {
+  list-style: none;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+input {
+  display: block;
+  font-family: var(--body-font);
+}
+
+button {
+  font-family: var(--body-font);
+  outline: none;
+  border: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1120px;
+  margin-right:  2.4rem;
+  margin-left: 2.4rem;
+}
+
+@media screen and (min-width: 1120px) {
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.main {
+  overflow: hidden;
+}

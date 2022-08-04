@@ -14,6 +14,7 @@
       "dom",
       "dom.iterable",
       "scripthost"
-    ]
+    ],
+    "jsx": "preserve" // corrige problema de identificação do typescript
   }
 }
