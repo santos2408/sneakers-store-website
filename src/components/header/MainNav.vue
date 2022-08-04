@@ -6,7 +6,8 @@
 
       <div class="nav__icons">
         <nav-cart />
-        <nav-profile />
+        <nav-profile @click="handleLogout" v-if="isLoggedIn" />
+        <nav-button @click="handleLogin" v-else />
       </div>
     </nav>
   </header>
@@ -17,14 +18,33 @@ import NavLogo from "@/components/header/NavLogo.vue";
 import NavMenu from "@/components/header/NavMenu.vue";
 import NavCart from "@/components/header/NavCart.vue";
 import NavProfile from "@/components/header/NavProfile.vue";
+import NavButton from "@/components/header/NavButton.vue";
 
 export default {
   name: "MainNav",
+
+  data() {
+    return {
+      isLoggedIn: false,
+    };
+  },
+
+  methods: {
+    handleLogin() {
+      this.isLoggedIn = true;
+    },
+
+    handleLogout() {
+      this.isLoggedIn = false;
+    },
+  },
+
   components: {
     NavLogo,
     NavMenu,
     NavCart,
     NavProfile,
+    NavButton,
   },
 };
 </script>
