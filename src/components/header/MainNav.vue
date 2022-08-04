@@ -6,7 +6,7 @@
 
       <div class="nav__icons">
         <nav-cart />
-        <nav-profile @click="handleLogout" v-if="isLoggedIn" />
+        <nav-profile v-if="isLoggedIn" />
         <nav-button @click="handleLogin" v-else />
       </div>
     </nav>
@@ -32,10 +32,6 @@ export default {
   methods: {
     handleLogin() {
       this.isLoggedIn = true;
-    },
-
-    handleLogout() {
-      this.isLoggedIn = false;
     },
   },
 
